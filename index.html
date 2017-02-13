@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Perfect slide menu</title>
+<link href="font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".parent > a").click(function(){
+		$(".child").slideUp();
+		$(".parent").children("a").removeClass("active");
+		$(".parent").children("a").addClass("cha");
+		$(".parent > i").removeClass("fa-angle-down");
+		$(".parent > i").addClass("fa-angle-right");
+		$(".child > li").children('a').removeClass("con_active");
+		$(".child > li").children('a').addClass("con");
+		if($(this).next().css('display')=='none'){
+			$(this).next().slideDown();
+			$(this).removeClass("cha");
+			$(this).addClass("active");
+			$(this).parents(".parent").children("i").removeClass("fa-angle-right");
+			$(this).parents(".parent").children("i").addClass("fa-angle-down");
+		}else{
+			$(this).next().slideUp();
+			$(this).parents(".parent").children("i").removeClass("fa-angle-down");
+			$(this).parents(".parent").children("i").addClass("fa-angle-right");
+		}
+	});
+
+	$(".child > li").children('a').click(function(){
+		$(".child > li").children('a').removeClass("con_active");
+		$(".child > li").children('a').addClass("con");
+		$(this).removeClass("con");
+		$(this).addClass("con_active");
+	});
+});
+</script>
+</head>
+
+<body>
+	<div id="beauty_menu">
+    	<ul class="main_menu">
+        	<li class="parent">
+        		<i class="fa fa-angle-right" aria-hidden="true"></i>
+	            <a class="cha" href="#"><span><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></span>Products</a>
+            	<ul class="child">
+                	<li><a class="con" href="#1">Laptop</a>
+                    <li><a class="con" href="#2">Telephone</a>
+                    <li><a class="con" href="#3">Tablet</a>
+                    <li><a class="con" href="#4">Ecessories</a>
+                </ul>
+            </li>
+	        <li class="parent">
+	        	<i class="fa fa-angle-right" aria-hidden="true"></i>
+	        	<a class="cha" href="#"><span><i class="fa fa-info-circle" aria-hidden="true"></i></span>About</a>
+            	<ul class="child">
+                	<li><a class="con" href="#1">Laptop</a>
+                    <li><a class="con" href="#2">Telephone</a>
+                    <li><a class="con" href="#3">Tablet</a>
+                    <li><a class="con" href="#4">Ecessories</a>
+                </ul>
+            </li>
+	        <li class="parent">
+	        	<i class="fa fa-angle-right" aria-hidden="true"></i>
+	        	<a class="cha" href="#"><span><i class="fa fa-envelope" aria-hidden="true"></i></span>Contact</a>
+            	<ul class="child">
+                	<li><a class="con" href="#1">Laptop</a>
+                    <li><a class="con" href="#2">Telephone</a>
+                    <li><a class="con" href="#3">Tablet</a>
+                    <li><a class="con" href="#4">Ecessories</a>
+                </ul>
+            </li>
+	        <li class="parent">
+	        	<i class="fa fa-angle-right" aria-hidden="true"></i>
+	        	<a class="cha" href="#"><span><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>News</a>
+            	<ul class="child">
+                	<li><a class="con" href="#1">Laptop</a>
+                    <li><a class="con" href="#2">Telephone</a>
+                    <li><a class="con" href="#3">Tablet</a>
+                    <li><a class="con" href="#4">Ecessories</a>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

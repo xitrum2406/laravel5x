@@ -1,0 +1,16 @@
+*{padding:0; margin:0; list-style:none; text-decoration:none}
+body{background-color:#333; font-family: arial; font-weight:bold;}
+#beauty_menu{width:160px; height:auto ;box-shadow: 0 0 8px 0.5px white; margin:auto}
+.parent{width:160px; height: auto; display:block; position:relative; margin-bottom:1px}
+.cha{font-size:15px; color:grey; background-color:#C00; display:block; padding:5px 5px 5px 0px}
+.fa-cart-arrow-down, .fa-info-circle, .fa-envelope, .fa-newspaper-o{position:relative; bottom:2px}
+.fa-angle-right {display:block; position:absolute; right:5px; top:5px; color:grey; font-size:20px; transition: all 0.7s}
+.parent:hover .cha{background-color:#F33; color:#FFFFFF; transition:all .2s}
+.parent:hover .fa-angle-right {color:#FFFFFF; transition:all 0.3s}
+.fa-angle-down {display:block; position:absolute; right:5px; top:5px; color:white; font-size:20px; transform:rotate(360deg); transition: all 0.7s}
+.child{width:160px; height:auto; display:none}
+.con{font-size:12px; color:#B5B2B2; background-color:#CCC5; display:block; border-bottom:1px solid white; padding:5px 5px 5px 8px}
+.child li:hover .con{background-color:white; color:#0D1446; transition: all .2s}
+span{margin-left:5px; margin-right:8px; position:relative; top:2px}
+.active{font-size:15px; background-color:#F33; color:#FFFFFF; display:block; padding:5px 5px 5px 0px; transition:all .2s}
+.con_active{font-size:12px; color:#0D1446; background-color:white; display:block; border-bottom:1px solid white; padding:5px 5px 5px 8px; }
